@@ -1,0 +1,15 @@
+body {
+  font-family: "Open Sans Condensed";
+  padding: 20px 40px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+
+  &:hover {
+    color: #003366;
+    background: rgba(150, 150, 150, 0.33);
+    border-radius: 5px;
+  }
+}
