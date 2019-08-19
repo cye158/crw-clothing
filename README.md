@@ -1,3 +1,18 @@
+# CRW Clothing
+
+## Description:
+
+A Clothing E-Commerce app. (In Progrress)
+
+## Objective:
+
+Get more used to React.
+Learn utilizing tools like Redux, Hooks, GraphQL, ContextAPI, Stripe, Firebase.(could change)
+
+###########################################################
+###########################################################
+###########################################################
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="50px" height="39px" viewBox="0 0 50 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="50px" height="50px" viewBox="0 0 50 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
     <title>Group</title>
     <desc>Created with Sketch.</desc>
     <g id="WiP" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Artboard" transform="translate(-90.000000, -30.000000)">
             <g id="Group" transform="translate(90.000000, 35.000000)">
-                <polygon id="Rectangle" fill="#808282" points="3 14 25 26.5 47 14 40.855176 30 9.08421785 30"></polygon>
-                <polygon id="Triangle" fill-opacity="0.725" fill="#101A1A" points="25 8 40 30 10 30"></polygon>
-                <circle id="Oval" fill="#808282" fill-opacity="1" cx="25" cy="22" r="2"></circle>
+                <polygon id="Rectangle" stroke-width="1" stroke="rgba(45,45,45,0.3)" fill="#808282" points="3 14 25 28.5 47 14 40.855176 30 9.08421785 30"></polygon>
+                <polygon id="Triangle" stroke-width="1" stroke="rgba(45,45,45,0.3)" fill-opacity="0.525" fill="#101A1A" points="10 5 40 30 20 30"></polygon>
+                <polygon id="Triangle" stroke-width="1" stroke="rgba(45,45,45,0.3)" fill-opacity="0.525" fill="#101A1A" points="40 5 30 30 10 30"></polygon>
+                <polygon id="Triangle" stroke-width="1" stroke="rgba(45,45,45,0.3)" fill-opacity="0.525" fill="#101A1A" points="25 14 32.5 7.5 17.5 7.5"></polygon>
             </g>
         </g>
     </g>

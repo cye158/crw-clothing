@@ -10,6 +10,12 @@ a {
   &:hover {
     color: #003366;
     background: rgba(150, 150, 150, 0.33);
-    border-radius: 5px;
+    border-radius: 50px;
+  }
+
+  &:active {
+    color: #ffff;
+    background: rgba(95, 95, 95, 0.5);
+    border-radius: 50px;
   }
 }
