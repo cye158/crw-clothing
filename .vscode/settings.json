@@ -1,0 +1,4 @@
+{
+    "javascript.suggest.completeFunctionCalls": true,
+    "javascript.referencesCodeLens.enabled": true
+}
