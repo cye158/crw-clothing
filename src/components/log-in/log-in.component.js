@@ -3,6 +3,7 @@ import FormInput from "../form-input/form-input.component";
 import "./log-in.scss";
 import CustomButton from "../custom-button/custom-button.component";
 import { LogInWithGoogle } from "../../firebase/firebase.utils";
+import { auth } from "../../firebase/firebase.utils";
 
 class Login extends React.Component {
   state = { email: "", password: "" };
@@ -13,9 +14,15 @@ class Login extends React.Component {
     this.setState({ [name]: value });
   };
 
-  handleSubmit = e => {
+  handleSubmit = async e => {
     e.preventDefault();
-    this.setState({ email: "", password: "" });
+    const { email, password } = this.state;
+    try {
+      await auth.signInWithEmailAndPassword(email, password);
+      this.setState({ email: "", password: "" });
+    } catch (e) {
+      console.log("Error Login: ", e.message);
+    }
   };
 
   render() {
