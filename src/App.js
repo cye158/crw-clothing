@@ -11,10 +11,6 @@ import { setCurrentUser } from "./redux/user/user.actions";
 import "./App.scss";
 
 class App extends React.Component {
-  state = {
-    currentUser: null
-  };
-
   unsubscribeAuth = null;
 
   componentDidMount() {
@@ -38,10 +34,9 @@ class App extends React.Component {
   }
 
   render() {
-    const { currentUser } = this.state;
     return (
       <div>
-        <Header currentUser={currentUser} />
+        <Header />
         <Switch>
           <Route exact path="/" component={Homepage} />
           <Route path="/shop" component={ShopPage} />
