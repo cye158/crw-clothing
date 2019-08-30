@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import Homepage from "./pages/homepage/homepage.component";
 import Header from "./components/header/header.component";
@@ -14,16 +14,16 @@ class App extends React.Component {
   unsubscribeAuth = null;
 
   componentDidMount() {
-    const { setUser } = this.props;
+    const { setCurrentUser } = this.props;
     this.unsubscribeAuth = auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
         const userRef = await createUserProfileDoc(userAuth);
 
         userRef.onSnapshot(snapShot => {
-          setUser({ id: snapShot.id, ...snapShot.data() });
+          setCurrentUser({ id: snapShot.id, ...snapShot.data() });
         });
       } else {
-        setUser(userAuth);
+        setCurrentUser(userAuth);
       }
     });
   }
@@ -34,24 +34,33 @@ class App extends React.Component {
   }
 
   render() {
+    const { currentUser } = this.props;
     return (
       <div>
         <Header />
         <Switch>
           <Route exact path="/" component={Homepage} />
           <Route path="/shop" component={ShopPage} />
-          <Route path="/login" component={LoginAndRegisterPage} />
+          <Route
+            exact
+            path="/login"
+            render={() =>
+              currentUser ? <Redirect to="/" /> : <LoginAndRegisterPage />
+            }
+          />
         </Switch>
       </div>
     );
   }
 }
 
+const mapStateToProps = ({ user }) => ({ currentUser: user.currentUser });
+
 const mapDispatchToProps = dispatch => ({
-  setUser: user => dispatch(setCurrentUser(user))
+  setCurrentUser: user => dispatch(setCurrentUser(user))
 });
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(App);
