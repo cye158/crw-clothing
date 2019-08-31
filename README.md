@@ -2,12 +2,11 @@
 
 ## Description:
 
-A Clothing E-Commerce app. (In Progress)
+A Clothing E-Commerce app. (IN PROGRESS)
 
-## Objective:
+## Tech & API to be used:
 
-Get more used to React.<br>
-Learn usage of Redux, Hooks, GraphQL, ContextAPI, Stripe & Firebase.
+Use React, Redux, Hooks, GraphQL, ContextAPI, Stripe & Firebase.
 
 ---
 
