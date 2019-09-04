@@ -37,11 +37,11 @@ const Header = ({ currentUser, hiddenCart }) => {
   );
 };
 
-const mapStatetoProps = ({ user: { currentUser }, cart: { hiddenCart } }) => {
+const mapStateToProps = ({ user: { currentUser }, cart: { hiddenCart } }) => {
   return {
     currentUser,
     hiddenCart
   };
 };
 
-export default connect(mapStatetoProps)(Header);
+export default connect(mapStateToProps)(Header);
