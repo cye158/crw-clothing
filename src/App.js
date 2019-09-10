@@ -41,18 +41,20 @@ class App extends React.Component {
     return (
       <div>
         <Header />
-        <Switch>
-          <Route exact path="/" component={Homepage} />
-          <Route path="/shop" component={ShopPage} />
-          <Route exact path="/checkout" component={CheckoutPage} />
-          <Route
-            exact
-            path="/login"
-            render={() =>
-              currentUser ? <Redirect to="/" /> : <LoginAndRegisterPage />
-            }
-          />
-        </Switch>
+        <div className="app-container">
+          <Switch>
+            <Route exact path="/" component={Homepage} />
+            <Route path="/shop" component={ShopPage} />
+            <Route exact path="/checkout" component={CheckoutPage} />
+            <Route
+              exact
+              path="/login"
+              render={() =>
+                currentUser ? <Redirect to="/" /> : <LoginAndRegisterPage />
+              }
+            />
+          </Switch>
+        </div>
       </div>
     );
   }
